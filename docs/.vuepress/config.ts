@@ -9,7 +9,7 @@ import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 const { readFileList, readTotalFileWords, readEachFileWords } = require('./webSiteInfo/readFile');
 
-const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
+const DOMAIN_NAME = 'jia.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -32,26 +32,41 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       { text: '首页', link: '/' },
       {
         text: 'JAVA技术栈',
-        link: '/pages/57742c/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        link: '/pages/162c8e/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: '数据结构', link: '/pages/57742c/'
-          },
-          {
-            text: '多线程高并发', link: '/pages/404/'
-          },
           {
             text: '设计模式',link: '/pages/162c8e/'
           },
           {
-            text: 'web框架',link:'/pages/404/',
+            text: '数据结构', link: '/pages/57742c/'
           },
           {
-            text: '中间件', link: '/pages/404/'
+            text: '并发编程', link: '/pages/404/'
           },
           {
-            text: '调优', link: '/pages/404/'
+            text: 'JVM调优',link:'/pages/01077a/',
+          },
+          {
+            text: 'Mysql与性能调优', link: '/pages/404/'
+          },
+          {
+            text: 'Redis原理', link: '/pages/404/'
+          },
+          {
+            text: 'RocketMQ原理', link: '/pages/404/'
+          },
+          {
+            text: 'SpringCloudAlibaba', link: '/pages/404/'
+          },
+          {
+            text: '分布式组件', link: '/pages/92db97/'
+          },
+          {
+            text: '网络IO与Netty', link: '/pages/404/'
+          },
+          {
+            text: '架构设计案例', link: '/pages/404/'
           },
         ],
       },
@@ -75,12 +90,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         text: '算法',
         link: '/algorithm/',
+        items: [
+          { text: '《入门》', link: '/pages/3eddac/' },
+          { text: '《初级》', link: '/pages/3be4df/' },
+          { text: '《高级》', link: '/pages/b7abf5/' },
+        ],
       },
       {
         text: '部署运维',
         link: '/pages/adf46f/',
       },
-      {
+     /* {
         text: '原创项目',
         link: '/myProject/',
         items: [
@@ -88,12 +108,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '《CRM客户管理系统》', link: '/pages/404/' },
           { text: ' 持续更新中... ', link: '/pages/404/' },
         ],
-      },
-      {
+      },*/
+    /*  {
         text: '面试',
         link: '/more/',
-      },
-      { text: '关于我', link: '/about/' },
+      },*/
+      // { text: '关于我', link: '/about/' },
       /*{
        text: '收藏',
        link: '/pages/beb6c0bd8a66cea6/',
@@ -129,10 +149,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: true, // 启用编辑
+    editLinks: false, // 启用编辑
     editLinkText: '编辑',
 
-    //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
+    //*** 以下是Vdoing主题相关配置，文档：https://doc.jia.com/pages/a20ce8/ ***//
 
     category: false, // 是否打开分类功能，默认true
     tag: false, // 是否打开标签功能，默认true
@@ -196,7 +216,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       slogan: '专注..',
     },
 
-    // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
+    // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.jia.com/pages/a20ce8/#social)
     social: {
       // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
       icons: [
@@ -353,7 +373,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
+   /* [
       'vuepress-plugin-comment', // 评论
       {
         choosen: 'gitalk',
@@ -361,8 +381,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           clientID: 'a6e1355287947096b88b',
           clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
           repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          owner: 'jia', // GitHub仓库所有者
+          admin: ['jia'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
@@ -372,7 +392,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
         },
       },
-    ],
+    ],*/
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
