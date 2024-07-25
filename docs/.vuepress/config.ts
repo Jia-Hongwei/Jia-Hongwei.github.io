@@ -97,6 +97,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
+        text: '面试',
+        link: '/pages/7bdde3/',
+        items: [
+          { text: '《架构基础》', link: '/pages/7bdde3/' },
+          { text: '《并发编程》', link: '/pages/01077a/' },
+          { text: '《jvm调优》', link: '/pages/01077a/' },
+          { text: '《mysql调优》', link: '/pages/950da2/' },
+          { text: '《缓存》', link: '/pages/01077a/' },
+          { text: '《mybatis》', link: '/pages/01077a/' },
+          { text: '《spring》', link: '/pages/01077a/' },
+          { text: '《消息队列》', link: '/pages/01077a/' },
+          { text: '《微服务》', link: '/pages/01077a/' },
+          { text: '《项目专题》', link: '/pages/01077a/' },
+        ],
+      },
+      {
         text: '部署运维',
         link: '/pages/adf46f/',
       },
